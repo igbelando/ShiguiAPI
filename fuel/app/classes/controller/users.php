@@ -22,10 +22,10 @@ class Controller_Users extends Controller_Rest
                 return $json;
             }
 
-            $users = Model_Usuarios::find('all');
+            $users = Model_Users::find('all');
 
             $input = $_POST;
-            $user = new Model_Usuarios();
+            $user = new Model_Users();
             $user->name = $input['name'];
             $user->password = $input['password'];
             $user->email = $input['email'];
